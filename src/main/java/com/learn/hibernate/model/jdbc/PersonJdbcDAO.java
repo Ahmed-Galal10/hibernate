@@ -1,6 +1,7 @@
 package com.learn.hibernate.model.jdbc;
 
 import com.learn.hibernate.model.entity.Person;
+import com.learn.hibernate.util.PersonRowMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -23,7 +24,7 @@ public class PersonJdbcDAO {
 
     public Person findById(Integer id) {
         String queryString = "SELECT * FROM person WHERE id=?";
-        return jdbcTemplate.queryForObject(queryString, new BeanPropertyRowMapper<>(Person.class), id);
+        return jdbcTemplate.queryForObject(queryString, new PersonRowMapper(), id);
     }
 
     public List<Person> findByName(String name) {
