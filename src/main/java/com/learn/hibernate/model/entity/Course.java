@@ -1,4 +1,4 @@
-package com.learn.hibernate.model;
+package com.learn.hibernate.model.entity;
 
 public class Course {
     private Long id;

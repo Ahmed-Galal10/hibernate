@@ -1,9 +1,17 @@
 package com.learn.hibernate.model.entity;
 
+import jakarta.persistence.*;
+
 import java.util.Date;
 
+@Entity
+@Table(name = "person")
 public class Person {
-    private int id;
+    @Id
+    @GeneratedValue
+    private Long id;
+
+    @Column(name = "name")
     private String name;
     private String location;
     private Date birthDate;
@@ -11,18 +19,24 @@ public class Person {
     public Person() {
     }
 
-    public Person(int id, String name, String location, Date birthDate) {
+    public Person(String name, String location, Date birthDate) {
+        this.name = name;
+        this.location = location;
+        this.birthDate = birthDate;
+    }
+
+    public Person(Long id, String name, String location, Date birthDate) {
         this.id = id;
         this.name = name;
         this.location = location;
         this.birthDate = birthDate;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
