@@ -1,13 +1,13 @@
-package com.learn.hibernate.model;
+package com.learn.hibernate.dto;
 
-public class Course {
+public class CourseDTO {
     private Long id;
     private String name;
     private String author;
 
-    public Course() {}
+    public CourseDTO() {}
 
-    public Course(Long id, String name, String author) {
+    public CourseDTO(Long id, String name, String author) {
         this.id = id;
         this.name = name;
         this.author = author;

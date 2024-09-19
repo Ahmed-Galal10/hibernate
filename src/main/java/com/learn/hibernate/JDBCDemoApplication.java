@@ -1,7 +1,7 @@
 package com.learn.hibernate;
 
 import com.learn.hibernate.entity.Person;
-import com.learn.hibernate.model.PersonJdbcDAO;
+import com.learn.hibernate.dao.PersonJdbcDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;

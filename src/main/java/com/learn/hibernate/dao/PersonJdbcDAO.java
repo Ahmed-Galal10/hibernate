@@ -1,4 +1,4 @@
-package com.learn.hibernate.model;
+package com.learn.hibernate.dao;
 
 import com.learn.hibernate.entity.Person;
 import com.learn.hibernate.mapper.PersonRowMapper;
