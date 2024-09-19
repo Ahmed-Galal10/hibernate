@@ -1,7 +1,7 @@
 package com.learn.hibernate;
 
-import com.learn.hibernate.model.entity.Person;
-import com.learn.hibernate.model.jpa.PersonJPARepo;
+import com.learn.hibernate.entity.Person;
+import com.learn.hibernate.repository.PersonJPARepo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,5 +36,7 @@ public class JPADemoApplication implements CommandLineRunner {
         logger.info("\nUpdate Person -> {}", personJPARepo.update(person2));
 
         personJPARepo.deleteById(1001L);
+
+        logger.info("\\nRetrieve all persons -> {}", personJPARepo.findAll());
     }
 }

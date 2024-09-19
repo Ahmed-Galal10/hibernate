@@ -1,16 +1,23 @@
-package com.learn.hibernate.model.jpa;
+package com.learn.hibernate.repository;
 
-import com.learn.hibernate.model.entity.Person;
+import com.learn.hibernate.entity.Person;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 @Repository
 @Transactional
 public class PersonJPARepo {
     @PersistenceContext
     EntityManager entityManager;
+
+    public List<Person> findAll() {
+        return entityManager.createNamedQuery("get_all_persons", Person.class)
+                .getResultList();
+    }
 
     public Person findById(Long id) {
         return entityManager.find(Person.class, id);
