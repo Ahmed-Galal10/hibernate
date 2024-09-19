@@ -1,7 +1,7 @@
-package com.learn.hibernate.model.jdbc;
+package com.learn.hibernate.model;
 
-import com.learn.hibernate.model.entity.Person;
-import com.learn.hibernate.util.PersonRowMapper;
+import com.learn.hibernate.entity.Person;
+import com.learn.hibernate.mapper.PersonRowMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;

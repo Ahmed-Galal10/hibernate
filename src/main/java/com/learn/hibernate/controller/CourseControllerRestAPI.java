@@ -1,6 +1,6 @@
 package com.learn.hibernate.controller;
 
-import com.learn.hibernate.model.entity.Course;
+import com.learn.hibernate.model.Course;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

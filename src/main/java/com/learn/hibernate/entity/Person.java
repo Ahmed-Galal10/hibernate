@@ -1,17 +1,18 @@
-package com.learn.hibernate.model.entity;
+package com.learn.hibernate.entity;
 
 import jakarta.persistence.*;
 
 import java.util.Date;
 
 @Entity
-@Table(name = "person")
+//@Table(name = "person")
+@NamedQuery(name = "get_all_persons", query = "select p from Person p")
 public class Person {
     @Id
     @GeneratedValue
     private Long id;
 
-    @Column(name = "name")
+//    @Column(name = "name")
     private String name;
     private String location;
     private Date birthDate;

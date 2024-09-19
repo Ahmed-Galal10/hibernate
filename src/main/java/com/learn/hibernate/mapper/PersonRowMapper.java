@@ -1,6 +1,6 @@
-package com.learn.hibernate.util;
+package com.learn.hibernate.mapper;
 
-import com.learn.hibernate.model.entity.Person;
+import com.learn.hibernate.entity.Person;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;
